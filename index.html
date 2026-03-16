@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plant Disease Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f9f4;
+      text-align: center;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #2e7d32;
+    }
+    form {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: inline-block;
+      width: 90%;
+      max-width: 400px;
+      margin-top: 20px;
+    }
+    input[type="file"] {
+      display: block;
+      margin: 20px auto;
+      font-size: 16px;
+    }
+    button {
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌱 Plant Disease Project</h1>
+  <p>
+    This project is a Deep Learning application designed to help farmers and researchers
+    identify plant diseases through leaf images. By leveraging a Convolutional Neural Network (CNN),
+    the system can classify images into specific disease categories or determine if the plant is healthy,
+    providing a fast and accessible tool for agricultural health monitoring.
+  </p>
+
+  <h2>Upload Leaf Photo</h2>
+  <p>Select or take a photo of your plant leaf to check its health.</p>
+  <form action="http://localhost:5678/webhook/plant-disease" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*" capture="environment" required>
+    <button type="submit">📤 Upload</button>
+  </form>
+</body>
+</html>
